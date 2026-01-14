@@ -18,6 +18,7 @@ def main():
 def weights():
     while True:
         print("\n1. Gram to KG")
+        print("2. KG to gram")
         print("Enter nothing to go back!")
         Weight_choice = input("Which measure would you like to choose: ")
 
@@ -32,7 +33,17 @@ def weights():
                 
             except:
                 print("ERROR please input a int or a float not a str!")
-
+        if Weight_choice == "2":
+            kilogram = input("How many Kilograms: ")
+            try:
+                kilogram = float(kilogram)
+                gram = kilogram * 1000
+                print(f"{gram} gram(s)")
+                weights()
+                break
+                
+            except:
+                print("ERROR please input a int or a float not a str!")
         if Weight_choice == "":
             main()
             break
